@@ -2,11 +2,12 @@
    GLOBAL SETTINGS
 ================================ */
 :root {
-  --brand: #4CAF50;
-  --brand-dark: #43a047;
-  --dark: #111827;
-  --muted: #6b7280;
-  --bg-light: #f9fafb;
+  --color-bg: #FFFFFF;       /* white, clean base */
+  --color-text: #1A1A1A;     /* near‑black for clarity */
+  --color-muted: #555555;    /* secondary text */
+  --color-accent: #4FAFBF;    /* calm teal/blue accent */
+  --color-accent-dark: #3E8D9E; /* darker accent for hover */
+  --color-light: #F7F9FA;     /* subtle background */
 }
 
 body {

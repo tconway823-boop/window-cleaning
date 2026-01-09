@@ -368,3 +368,15 @@ footer {
     padding: 0 1.5rem;
   }
 }
+.before-after img {
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.before-after img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 35px 70px rgba(0,0,0,0.22);
+}

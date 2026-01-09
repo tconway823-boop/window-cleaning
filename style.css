@@ -2,12 +2,12 @@
    GLOBAL SETTINGS
 ================================ */
 :root {
-  --color-bg: #FFFFFF;       /* white, clean base */
-  --color-text: #1A1A1A;     /* near‑black for clarity */
-  --color-muted: #555555;    /* secondary text */
-  --color-accent: #4FAFBF;    /* calm teal/blue accent */
-  --color-accent-dark: #3E8D9E; /* darker accent for hover */
-  --color-light: #F7F9FA;     /* subtle background */
+  --color-bg: #FFFFFF;           /* clean white base */
+  --color-text: #1A1A1A;         /* near-black for readability */
+  --color-muted: #555555;        /* secondary text */
+  --color-accent: #4FAFBF;       /* calm teal/blue accent */
+  --color-accent-dark: #3E8D9E;  /* darker accent for hover */
+  --color-light: #F7F9FA;        /* subtle background */
 }
 
 body {
@@ -15,8 +15,8 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 17px;
   line-height: 1.7;
-  color: var(--dark);
-  background: white;
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 img {
@@ -32,7 +32,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: white;
+  background: var(--color-bg);
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -41,11 +41,13 @@ img {
   justify-content: space-between;
   align-items: center;
   height: 72px;
-  padding: 0 2rem; /* extra padding left/right for logo */
+  padding: 0 3rem; /* more space around logo */
 }
 
 .logo h1 {
-  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin: 0;
 }
 
 .main-nav ul {
@@ -59,12 +61,12 @@ img {
 .main-nav a {
   text-decoration: none;
   font-weight: 500;
-  color: var(--dark);
+  color: var(--color-text);
   transition: color 0.2s ease;
 }
 
 .main-nav a:hover {
-  color: var(--brand);
+  color: var(--color-accent);
 }
 
 .menu-toggle {
@@ -91,7 +93,7 @@ img {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+  background: linear-gradient(to bottom right, rgba(0,0,0,0.25), rgba(0,0,0,0.5));
   z-index: 0;
 }
 
@@ -104,8 +106,8 @@ img {
 
 .hero h1 {
   margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
-  font-size: 3.4rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1.2;
@@ -114,7 +116,7 @@ img {
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   margin-bottom: 2.5rem;
   opacity: 0;
   animation: fadeIn 1.5s ease forwards;
@@ -124,7 +126,7 @@ img {
 .hero .btn {
   display: inline-block;
   padding: 1rem 3rem;
-  background: var(--brand);
+  background: var(--color-accent);
   color: white;
   border-radius: 999px;
   font-weight: 500;
@@ -136,7 +138,7 @@ img {
 .hero .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-  background: var(--brand-dark);
+  background: var(--color-accent-dark);
 }
 
 /* ===============================
@@ -145,7 +147,7 @@ img {
 .btn {
   display: inline-block;
   padding: 1rem 2.75rem;
-  background: var(--brand);
+  background: var(--color-accent);
   color: white;
   border-radius: 999px;
   font-weight: 500;
@@ -156,12 +158,11 @@ img {
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-  background: var(--brand-dark);
+  background: var(--color-accent-dark);
 }
 
 /* ===============================
    CONTAINER SECTIONS
-   Centers content + spacing
 ================================ */
 section.container {
   max-width: 1100px;
@@ -171,7 +172,7 @@ section.container {
 }
 
 section h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.25rem;
   margin-bottom: 1.5rem;
 }
@@ -179,6 +180,7 @@ section h2 {
 section p {
   font-size: 1.1rem;
   line-height: 1.8;
+  color: var(--color-muted);
   margin-bottom: 2.5rem;
 }
 
@@ -194,18 +196,12 @@ section p {
 }
 
 .card {
-  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  background: var(--color-bg);
   padding: 3rem 2.5rem;
   border-radius: 18px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-}
-
-.card i {
-  font-size: 2rem;
-  color: var(--brand);
-  margin-bottom: 0.75rem;
 }
 
 .card:hover {
@@ -217,7 +213,7 @@ section p {
    TRUST SECTION
 ================================ */
 .trust {
-  background: var(--bg-light);
+  background: var(--color-light);
   padding: 4rem 1.5rem;
 }
 
@@ -225,13 +221,14 @@ section p {
   box-shadow: none;
   background: transparent;
   font-weight: 500;
+  color: var(--color-text);
 }
 
 /* ===============================
    BEFORE / AFTER
 ================================ */
 .before-after {
-  background: var(--bg-light);
+  background: var(--color-light);
   padding: 6rem 1.5rem;
 }
 
@@ -251,6 +248,13 @@ section p {
   max-width: 400px;
   margin: 0 auto;
   box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.before-after img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 35px 70px rgba(0,0,0,0.22);
 }
 
 /* ===============================
@@ -276,7 +280,7 @@ button {
   padding: 0.9rem;
   border: none;
   border-radius: 999px;
-  background: var(--brand);
+  background: var(--color-accent);
   color: white;
   font-size: 1rem;
   font-weight: 500;
@@ -284,7 +288,7 @@ button {
 }
 
 button:hover {
-  background: var(--brand-dark);
+  background: var(--color-accent-dark);
 }
 
 /* ===============================
@@ -330,7 +334,7 @@ footer {
     position: absolute;
     top: 72px;
     right: 0;
-    background: white;
+    background: var(--color-bg);
     width: 100%;
     padding: 1.5rem;
   }
@@ -368,16 +372,4 @@ footer {
   .header-container {
     padding: 0 1.5rem;
   }
-}
-.before-after img {
-  max-width: 400px;
-  margin: 0 auto;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.before-after img:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 35px 70px rgba(0,0,0,0.22);
 }
